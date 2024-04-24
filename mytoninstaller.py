@@ -314,7 +314,7 @@ def DownloadDump():
 
 	local.add_log("start DownloadDump fuction", "debug")
 	url = "https://dump.ton.org"
-	dumpSize = requests.get(url + "/dumps/latest_testnet.size.archive.txt").text
+	dumpSize = requests.get(url + "/dumps/latest_testnet.tar.size.archive.txt").text
 	print("dumpSize:", dumpSize)
 	needSpace = int(dumpSize) * 3
 	diskSpace = psutil.disk_usage("/var")
